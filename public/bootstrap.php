@@ -13,6 +13,8 @@
 date_default_timezone_set ('America/Chicago');
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
 
 $_SERVER['DOCUMENT_ROOT'] = realpath(dirname(__FILE__).'/../'); //this is a hack to make doc_root work the same on iis 6 and iis 7
 $doc_root = $_SERVER['DOCUMENT_ROOT']; //C:\inetpub\wwwroot
@@ -23,7 +25,7 @@ if(strlen($doc_root) < 1){ //$_SERVER['document_root'] isn't defined from CLI
 
 //PEAR library for connecting to MS SQL
 $db = $doc_root.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'DB.php';
-require_once('DB.php');
+require_once('../DB.php');
 
 //DSN 
 $user = 'experiment';
