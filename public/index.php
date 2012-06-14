@@ -4,13 +4,11 @@ error_reporting(-1);
 include_once 'bootstrap.php';
 $db = DB::connect(DSN);
 
-
 if(isset($_GET['action']) && $_GET['action'] == 'logout'){
     session_destroy();
     header('Location: ' . $_SERVER['SCRIPT_NAME']);
     die();
 }
-
 
 //set log in information
 if(isset($_POST['submit']) && isset($_POST['log_in'])){
@@ -157,8 +155,6 @@ unset($params);
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -192,7 +188,6 @@ $(document).ready(function(){
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
