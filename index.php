@@ -1,8 +1,8 @@
 <?php
-session_start();
+
 error_reporting(-1);
 include_once 'bootstrap.php';
-$db = DB::connect(DSN_DINGO);
+$db = DB::connect(DSN);
 
 
 if(isset($_GET['action']) && $_GET['action'] == 'logout'){
