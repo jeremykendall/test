@@ -24,12 +24,12 @@ $db = $doc_root.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'DB.php';
 
 require_once('DB.php');
 
-//DSN for CSG_Dingo   aka "dsn2"
+//DSN for CSG_Dingo aka "dsn2"
 $user = 'hfrg';
 $pass = '*****';
 $host = $_SERVER["COMPUTERNAME"] . '\SQLEXPRESS';
 
 $db_name = 'CSG_Dingo';
-$dsn_dingo = "mssql://$user:$pass@$host/$db_name"; 
+$dsn_dingo = "mssql://$user:$pass@$host/$db_name";
 
 define('DSN_DINGO',$dsn_dingo);
